@@ -1,0 +1,17 @@
+@import "../../../common/style_var.scss";
+
+.contactus-section {
+  height: 300px;
+  @include align-cntr();
+  background-color: pink;
+  color: white;
+  // position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-image: url("./footer-image/footer-wedge.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}

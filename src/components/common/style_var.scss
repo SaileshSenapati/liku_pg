@@ -1,0 +1,25 @@
+$app-font-size: 13px;
+
+$app-header-color: #333;
+
+$app-preview-name-color: yellow;
+
+@mixin align-cntr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin parallex-bg-image {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.app-loader {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  @include align-cntr();
+}

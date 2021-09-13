@@ -1,0 +1,47 @@
+@import "../common/style_var.scss";
+.header-cntr {
+  height: 50px;
+  background-color: $app-header-color;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 0px 5%;
+  position: fixed;
+  width: 100%;
+  opacity: 0.7;
+  transition: top 0.3s;
+  z-index: 9999;
+  .logo-cntr {
+    width: 100px;
+  }
+  .nav-bar {
+    width: calc(90% - 110px);
+    .nav-item-cntr {
+      display: flex;
+      list-style: none;
+      column-gap: 10px;
+      justify-content: flex-end;
+    }
+  }
+  .links {
+    color: white;
+    text-decoration: none;
+  }
+  .links:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .links:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}

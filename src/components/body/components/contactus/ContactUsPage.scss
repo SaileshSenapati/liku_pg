@@ -1,0 +1,31 @@
+@import "../../../common/style_var.scss";
+.contact-body {
+  padding-top: 50px;
+  height: 100vh;
+  width: 100vw;
+  @include align-cntr();
+  .contact-img-cntr {
+    padding: 60px 20px;
+    .profile-img {
+      border: 2px solid black;
+      border-radius: 50%;
+      padding: 5px;
+      height: 500px;
+      width: 400px;
+    }
+  }
+  .contact-dtls-cntr {
+    border: 1px solid red;
+    // height: 100%;
+    width: calc(100% - 450px);
+    padding: 10px 50px 50px 50px;
+    .contact-hdr {
+      @include align-cntr();
+      font-size: 5vh;
+      padding: 50px 0px;
+    }
+    .contact-para1 {
+      @include align-cntr();
+    }
+  }
+}
