@@ -3,6 +3,7 @@ import "./HomePage.scss";
 import WOW from "wowjs";
 import Parallax from "react-rellax";
 import { useHistory } from "react-router-dom";
+import Footer from "../footer/Footer";
 
 const HomePage = () => {
   const history = useHistory();
@@ -13,7 +14,7 @@ const HomePage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setQuoat(quoat + 1);
-    }, 60000);
+    }, 10000);
     return () => clearInterval(interval);
   });
   const openGalary = () => {
@@ -112,6 +113,7 @@ const HomePage = () => {
           </p>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

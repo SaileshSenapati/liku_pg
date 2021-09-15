@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
 import LoadingPage from "../common/LoadingPage";
-import Footer from "./components/footer/Footer";
+import CopyRightFooter from "./components/footer/CopyRightFooter";
 
 const BodyContainer = () => {
   const LazyHomePage = lazy(() => import("./components/home/HomePage"));
@@ -21,7 +21,7 @@ const BodyContainer = () => {
   return (
     <Suspense fallback={<LoadingPage />}>
       {getPages()}
-      <Footer />
+      <CopyRightFooter />
     </Suspense>
   );
 };

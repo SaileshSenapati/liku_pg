@@ -1,31 +1,92 @@
 @import "../../../common/style_var.scss";
 .contact-body {
-  padding-top: 50px;
-  height: 100vh;
-  width: 100vw;
-  @include align-cntr();
   .contact-img-cntr {
-    padding: 60px 20px;
-    .profile-img {
-      border: 2px solid black;
-      border-radius: 50%;
-      padding: 5px;
-      height: 500px;
-      width: 400px;
+    background-image: url("./contact_img3.jpg");
+    height: 100vh;
+    width: 100vw;
+    @include parallex-bg-image();
+    .contact-dtls-cntr {
+      position: absolute;
+      bottom: 0px;
+      color: white;
+      padding: 20px;
+      .contact-dtls {
+        @include align-cntr();
+        justify-content: left;
+        .cont-icon {
+          height: 20px;
+          width: 20px;
+          padding: 5px 10px;
+        }
+        .cont-link {
+          color: white;
+          text-decoration: none;
+          font-size: 18px;
+        }
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+      .contact-dtls-cntr {
+        padding: 20px 0px 20px 5px;
+        .contact-dtls {
+          .cont-icon {
+            height: 13px;
+            width: 13px;
+            font-size: 13px;
+            padding: 5px 5px;
+          }
+          .cont-link {
+            font-size: 13px;
+          }
+        }
+      }
     }
   }
   .contact-dtls-cntr {
-    border: 1px solid red;
-    // height: 100%;
-    width: calc(100% - 450px);
-    padding: 10px 50px 50px 50px;
-    .contact-hdr {
-      @include align-cntr();
-      font-size: 5vh;
-      padding: 50px 0px;
+    .contact-txt-wrpr {
+      padding: 10% 15%;
+      color: white;
+      background-color: black;
+      height: auto;
+      overflow: hidden;
+      .contact-hdr {
+        font-size: 36px;
+        padding-bottom: 5%;
+      }
+      .para {
+        font-size: 16px;
+        line-height: 150%;
+        padding: 10px 0px;
+      }
     }
-    .contact-para1 {
-      @include align-cntr();
+    @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+      .contact-txt-wrpr {
+        padding: 10% 10%;
+        .contact-hdr {
+          font-size: 18px;
+        }
+        .para {
+          font-size: 12px;
+        }
+      }
     }
   }
 }
+
+// check before you remove
+
+// .contact-img-cntr {
+//   position: absolute;
+//   top: 55px;
+//   left: 50px;
+//   overflow: hidden;
+//   .profile-img {
+//     border: 2px solid black;
+//     border-radius: 50%;
+//     padding: 5px;
+//     height: 500px;
+//     width: 400px;
+//   }
+// }

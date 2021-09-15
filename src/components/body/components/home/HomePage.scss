@@ -111,12 +111,12 @@
     .quoat {
       margin: 0;
       width: 60%;
-      animation: fadeIn 3s;
+      animation: fadeOutIn 10s;
       opacity: 0;
       animation-fill-mode: forwards;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
-      animation-duration: 60s;
+      // animation-duration: 10s;
       font-family: "Lucida Handwriting";
       text-align: center;
     }
@@ -126,13 +126,24 @@
   0% {
     opacity: 0;
   }
-  20% {
+  100% {
     visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes fadeOutIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
     opacity: 1;
   }
   100% {
     visibility: visible;
-    opacity: 1;
+    opacity: 0;
   }
 }
 @media only screen and (max-width: 768px) {
