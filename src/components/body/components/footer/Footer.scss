@@ -1,19 +1,79 @@
 @import "../../../common/style_var.scss";
 
-.contactus-section {
-  height: 300px;
+.footer-section {
+  height: 100vh;
   @include align-cntr();
-  background-color: pink;
+  background-color: black;
   color: white;
-  // position: fixed;
   bottom: 0;
   width: 100%;
-  background-image: url("./footer-image/footer-wedge.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("./footer_img.jpg");
+  @include parallex-bg-image();
   overflow: hidden;
+  .footer-dtls-cntr {
+    color: white;
+    padding: 20px;
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    .footer-title {
+      font-size: 24px;
+      padding: 0px 5px 10px 5px;
+      text-decoration: underline;
+    }
+    .footer-dtls {
+      @include align-cntr();
+      justify-content: left;
+      .cont-icon {
+        height: 20px;
+        width: 20px;
+        padding: 5px 10px;
+      }
+      .cont-link {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+    .footer-esti {
+      font-size: 13px;
+      padding: 30px 5px 5px 5px;
+    }
+    .footer-para {
+      font-size: 11px;
+      padding: 0px 5px 0px 5px;
+    }
+    .footer-find-more {
+      color: lightseagreen;
+      text-decoration: underline;
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      font-size: 13px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .footer-dtls-cntr {
+      padding: 20px 5px 20px 5px;
+      .footer-title {
+        font-size: 22px;
+        padding: 0px 5px 10px 5px;
+        text-decoration: underline;
+      }
+      .footer-dtls {
+        .cont-icon {
+          height: 13px;
+          width: 13px;
+          font-size: 13px;
+          padding: 5px 5px;
+        }
+        .cont-link {
+          font-size: 13px;
+        }
+      }
+    }
+  }
 }
 .copy-right-footer {
   width: 100vw;
