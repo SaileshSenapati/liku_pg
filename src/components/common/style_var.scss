@@ -2,7 +2,7 @@ $app-font-size: 13px;
 
 $app-header-color: #333;
 
-$app-preview-name-color: yellow;
+$app-preview-name-color: white;
 
 @mixin align-cntr {
   display: flex;
@@ -22,4 +22,20 @@ $app-preview-name-color: yellow;
   width: 100vw;
   overflow: hidden;
   @include align-cntr();
+}
+@mixin link-line {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-in-out;
+}
+@mixin link-line-hover {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

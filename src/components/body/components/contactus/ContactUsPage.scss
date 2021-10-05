@@ -1,15 +1,17 @@
 @import "../../../common/style_var.scss";
 .contact-body {
   .contact-img-cntr {
-    background-image: url("./contact_img3.jpg");
+    background-image: url("./contact_img.jpg");
     height: 100vh;
     width: 100vw;
     @include parallex-bg-image();
-    .contact-dtls-cntr {
+    background-position: top;
+    .contact-mini-dtls-cntr {
       position: absolute;
       bottom: 0px;
       color: white;
       padding: 20px;
+      padding-right: 0px;
       .contact-dtls {
         @include align-cntr();
         justify-content: left;
@@ -27,14 +29,14 @@
     }
     @media only screen and (max-width: 768px) {
       /* For mobile phones: */
-      .contact-dtls-cntr {
-        padding: 20px 0px 20px 5px;
+      .contact-mini-dtls-cntr {
+        padding: 20px 0px 20px 30px;
         .contact-dtls {
           .cont-icon {
             height: 13px;
             width: 13px;
             font-size: 13px;
-            padding: 5px 5px;
+            padding: 5px;
           }
           .cont-link {
             font-size: 13px;

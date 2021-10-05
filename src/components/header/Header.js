@@ -19,7 +19,8 @@ const Header = () => {
     <div className="header-cntr" id="navbar">
       <div className="logo-cntr">
         <a className="links" href="/">
-          Logo
+          <img src="./image/logo.png" alt="logo" width="50px" height="50px" />
+          <div className="title">Likhit's Photography</div>
         </a>
       </div>
       <nav className="nav-bar">
@@ -30,8 +31,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a className="links" href="/galary">
-              Galary
+            <a className="links" href="/gallery">
+              Gallery
             </a>
           </li>
           <li>

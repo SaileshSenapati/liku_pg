@@ -5,16 +5,19 @@ import CopyRightFooter from "./components/footer/CopyRightFooter";
 
 const BodyContainer = () => {
   const LazyHomePage = lazy(() => import("./components/home/HomePage"));
-  const LazyGalaryPage = lazy(() => import("./components/galary/GalaryPage"));
+  const LazyGalleryPage = lazy(() =>
+    import("./components/gallery/GalleryPage")
+  );
   const LazyContactUsPage = lazy(() =>
     import("./components/contactus/ContactUsPage")
   );
   const getPages = () => {
     return (
       <Switch>
-        <Route exact path="/" component={LazyHomePage} />
-        <Route exact path="/galary" component={LazyGalaryPage} />
+        <Route exact path="/gallery" component={LazyGalleryPage} />
         <Route exact path="/contactus" component={LazyContactUsPage} />
+        <Route exact path="/" component={LazyHomePage} />
+        <Route exact path="*" component={LazyHomePage} />
       </Switch>
     );
   };

@@ -1,0 +1,119 @@
+@import "../../../common/style_var.scss";
+
+.home-gal-hdr-cntr {
+  height: 50px;
+  width: 100%;
+  @include align-cntr();
+  padding: 10px;
+  font-size: 24px;
+}
+.home-gal-all-box-cntr {
+  padding: 10px 0px;
+  display: grid;
+  gap: 30px;
+  .home-gal-box-cntr {
+    @include align-cntr();
+    padding: 0 15%;
+    .home-gal-box {
+      cursor: pointer;
+      @include align-cntr();
+      padding: 0 10%;
+      .img-cntr {
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        background-color: yellowgreen;
+        .img-title {
+          position: absolute;
+          padding: 10px 20px;
+          animation: fadeIn 3s;
+          animation-fill-mode: forwards;
+          opacity: 0;
+          z-index: 10;
+          color: white;
+          backdrop-filter: saturate(200%) blur(10px);
+          -webkit-backdrop-filter: saturate(200%) blur(10px);
+          border-bottom-right-radius: 25px;
+          font-size: 24px;
+        }
+        .img-txt {
+          position: absolute;
+          height: auto;
+          width: auto;
+          color: white;
+          backdrop-filter: saturate(120%) blur(5px);
+          -webkit-backdrop-filter: saturate(120%) blur(5px);
+          bottom: 0;
+          z-index: 10;
+          padding: 0px 5px 10px 5px;
+          font-size: 16px;
+          width: calc(100% - 10px);
+        }
+        .home-gal-img {
+          transition: transform 5s ease-in-out;
+          z-index: 5;
+          max-width: 100%;
+          height: auto;
+        }
+        .clr-blk {
+          color: black;
+        }
+      }
+      .home-gal-img:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .cntr-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .home-gal-box-cntr {
+      padding: 0;
+      .home-gal-box {
+        padding: 0;
+        .img-cntr {
+          height: auto;
+          overflow: hidden;
+          position: relative;
+          background-color: yellowgreen;
+          .img-title {
+            position: absolute;
+            padding: 5px 10px;
+            font-size: 16px;
+          }
+          .img-txt {
+            padding: 0px 5px 10px 5px;
+            font-size: 12px;
+            width: calc(100% - 10px);
+          }
+        }
+      }
+    }
+    .cntr-2 {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+      .home-gal-box {
+        padding: 0 10%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home-gal-hdr-cntr {
+    font-size: 16px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
