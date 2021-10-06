@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <div className="header-cntr" id="navbar">
       <div className="logo-cntr">
-        <a className="links" href="/">
+        <a className="links" href="#/">
           <img src="./image/logo.png" alt="" width="50px" height="50px" />
           <div className="title">Likhit's Photography</div>
         </a>
@@ -26,17 +26,17 @@ const Header = () => {
       <nav className="nav-bar">
         <ui className="nav-item-cntr">
           <li>
-            <a className="links" href="/">
+            <a className="links" href="#/">
               Home
             </a>
           </li>
           <li>
-            <a className="links" href="/gallery">
+            <a className="links" href="#/gallery">
               Gallery
             </a>
           </li>
           <li>
-            <a className="links" href="/contactus">
+            <a className="links" href="#/contactus">
               Contact
             </a>
           </li>
