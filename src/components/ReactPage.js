@@ -7,7 +7,7 @@ const ReactPage = () => {
   return (
     <>
       <Header />
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <BodyContainer />
       </Router>
     </>
