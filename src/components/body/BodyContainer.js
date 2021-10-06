@@ -14,8 +14,8 @@ const BodyContainer = () => {
   const getPages = () => {
     return (
       <Switch>
-        <Route exact path="/gallery" component={LazyGalleryPage} />
-        <Route exact path="/contactus" component={LazyContactUsPage} />
+        <Route exact path="liku_pg/#/gallery" component={LazyGalleryPage} />
+        <Route exact path="liku_pg/#/contactus" component={LazyContactUsPage} />
         <Route exact path="/" component={LazyHomePage} />
         <Route exact path="*" component={LazyHomePage} />
       </Switch>
