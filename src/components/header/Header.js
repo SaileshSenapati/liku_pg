@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   useEffect(() => {
@@ -18,27 +19,27 @@ const Header = () => {
   return (
     <div className="header-cntr" id="navbar">
       <div className="logo-cntr">
-        <a className="links" href="#/">
+        <Link className="links" to="/">
           <img src="./image/logo.png" alt="" width="50px" height="50px" />
           <div className="title">Likhit's Photography</div>
-        </a>
+        </Link>
       </div>
       <nav className="nav-bar">
         <ui className="nav-item-cntr">
           <li>
-            <a className="links" href="#/">
+            <Link className="links" to="/">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="links" href="#/gallery">
+            <Link className="links" to="/gallery">
               Gallery
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="links" href="#/contactus">
+            <Link className="links" to="/contactus">
               Contact
-            </a>
+            </Link>
           </li>
         </ui>
       </nav>

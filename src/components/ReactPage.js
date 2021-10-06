@@ -6,8 +6,8 @@ import { HashRouter } from "react-router-dom";
 const ReactPage = () => {
   return (
     <>
-      <Header />
-      <HashRouter basename="/liku_pg">
+      <HashRouter>
+        <Header />
         <BodyContainer />
       </HashRouter>
     </>
