@@ -7,7 +7,7 @@ const ReactPage = () => {
   return (
     <>
       <Header />
-      <HashRouter>
+      <HashRouter basename="/liku_pg">
         <BodyContainer />
       </HashRouter>
     </>
