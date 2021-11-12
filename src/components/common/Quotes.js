@@ -6,6 +6,9 @@ const Quotes = () => {
   const [quoatIndex, setQuoatIndex] = useState(0);
   var quotes = document.getElementsByClassName("quote");
   useEffect(() => {
+    quotes[0].style.opacity = 1;
+  }, []);
+  useEffect(() => {
     const interval = setInterval(() => {
       let tempIndex = quoatIndex;
       quotes[tempIndex].style.opacity = 0;
@@ -30,7 +33,7 @@ const Quotes = () => {
         },
         1000
       );
-    }, 20000);
+    }, 7000);
     return () => clearInterval(interval);
   });
   return (

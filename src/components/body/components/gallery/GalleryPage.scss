@@ -52,26 +52,32 @@
       }
       .gal-sec-img-cntr {
         width: 100%;
-        columns: 3;
+        columns: 4;
         column-gap: 16px;
         .gal-img-wrpr {
           position: relative;
+          padding-bottom: 16px;
           .gal-img {
             max-width: 100%;
             height: auto;
             border-radius: 5px;
-            padding-bottom: 16px;
+            box-shadow: 5px 5px 20px;
           }
         }
       }
-      @media only screen and (max-width: 425px) {
+      @media only screen and (max-width: 1024px) {
         .gal-sec-img-cntr {
-          columns: 1;
+          columns: 3;
         }
       }
       @media only screen and (max-width: 768px) {
         .gal-sec-img-cntr {
           columns: 2;
+        }
+      }
+      @media only screen and (max-width: 425px) {
+        .gal-sec-img-cntr {
+          columns: 1;
         }
       }
     }
