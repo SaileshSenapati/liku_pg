@@ -6,13 +6,13 @@ import { useHistory } from "react-router-dom";
 const Footer = () => {
   const history = useHistory();
   const handleFindMore = () => {
-    history.push(`/contactus`);
+    history.push(`/about`);
   };
   return (
     <>
       <div className="footer-section" id="footer">
         <div className="footer-dtls-cntr">
-          <div className="footer-title">likhit's Photography</div>
+          <div className="footer-title">Likhit's Photography</div>
           {footerArray.map((eachDtls) => {
             return (
               <div className="footer-dtls">

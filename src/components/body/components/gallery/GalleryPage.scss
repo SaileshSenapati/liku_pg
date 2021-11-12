@@ -43,6 +43,7 @@
   }
   .gal-full-preview {
     .gal-section {
+      min-height: 200px;
       margin: 10px 16px 16px 16px;
       .gal-sec-hdr {
         @include align-cntr();

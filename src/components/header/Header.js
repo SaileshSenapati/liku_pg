@@ -20,7 +20,12 @@ const Header = () => {
     <div className="header-cntr" id="navbar">
       <div className="logo-cntr">
         <Link className="links" to="/">
-          <img src="./image/logo.png" alt="" width="50px" height="50px" />
+          <img
+            src={process.env.PUBLIC_URL + "/image/logo.png"}
+            alt=""
+            width="50px"
+            height="50px"
+          />
           <div className="title">Likhit's Photography</div>
         </Link>
       </div>
@@ -37,8 +42,8 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link className="links" to="/contactus">
-              Contact
+            <Link className="links" to="/about">
+              About
             </Link>
           </li>
         </ui>

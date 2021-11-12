@@ -81,11 +81,11 @@
   @include align-cntr();
   color: white;
   bottom: 0;
-  font-size: 11px;
+  font-size: 13px;
   padding: 2px;
 }
 @media only screen and (max-width: 768px) {
   .copy-right-footer {
-    font-size: 9px;
+    font-size: 11px;
   }
 }

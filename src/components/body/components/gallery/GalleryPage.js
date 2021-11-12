@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect } from "react/cjs/react.development";
+import React, { useEffect } from "react";
 import Footer from "../footer/Footer";
 import "./GalleryPage.scss";
 import WOW from "wowjs";
@@ -13,7 +12,7 @@ import {
   productImageConst,
   videoConst,
 } from "../../../common/ImageConstants";
-// import { LazyLoadImage } from "react-lazy-load-image-component";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Quotes from "../../../common/Quotes";
 
@@ -24,7 +23,7 @@ const GalleryPage = () => {
     { id: "pre-wedding", title: "Pre Wedding" },
     { id: "potrait", title: "Potrait" },
     { id: "product", title: "Product" },
-    { id: "nature", title: "Nature" },
+    { id: "others", title: "Others" },
     { id: "video", title: "Video" },
   ];
   useEffect(() => {
@@ -35,7 +34,7 @@ const GalleryPage = () => {
     const possibleIds = [
       "wedding",
       "pre-wedding",
-      "nature",
+      "others",
       "potrait",
       "product",
       "video",
@@ -54,19 +53,17 @@ const GalleryPage = () => {
   };
   const getGalSecDOM = (id, header, list) => {
     return (
-      <div className="gal-section" id={id}>
+      <div className="gal-section">
         <div className="gal-sec-hdr">{header}</div>
-        <div className="gal-sec-img-cntr">
+        <div className="gal-sec-img-cntr" id={id}>
           {list.map((image) => {
             return (
               <div className="gal-img-wrpr">
-                <img
+                <LazyLoadImage
                   className="gal-img"
                   alt={image.alt}
-                  src={image.src} // use normal <img> attributes as props
-                  width={image.width}
-                  height={image.height}
-                  // effect="blur"
+                  src={image.src}
+                  effect="blur"
                 />
               </div>
             );
@@ -83,12 +80,7 @@ const GalleryPage = () => {
           {videoConst.map((vid) => {
             return (
               <div className="gal-img-wrpr">
-                <video
-                  className="gal-img"
-                  // width={vid.width}
-                  // height={vid.height}
-                  controls
-                >
+                <video className="gal-img" controls>
                   <source src={vid.src} type="video/mp4" />
                   Your browser does not support the video.
                 </video>
@@ -123,9 +115,9 @@ const GalleryPage = () => {
         <div className="gal-full-preview">
           {getGalSecDOM("wedding", "Wedding", weddingImageConst)}
           {getGalSecDOM("pre-wedding", "Pre Wedding", preWeddingImageConst)}
-          {getGalSecDOM("nature", "Nature", natureImageConst)}
           {getGalSecDOM("potrait", "Potrait", potraitImageConst)}
           {getGalSecDOM("product", "Product", productImageConst)}
+          {getGalSecDOM("others", "Others", natureImageConst)}
           {getVideoDOM()}
         </div>
         <Quotes />

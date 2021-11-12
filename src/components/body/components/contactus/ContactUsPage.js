@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ContactUsPage.scss";
 import Parallax from "react-rellax";
-import { useEffect } from "react/cjs/react.development";
 import wowjs from "wowjs";
 import { footerArray } from "../../../common/Constants";
 

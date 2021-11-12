@@ -4,21 +4,40 @@ import "./Quotes.scss";
 
 const Quotes = () => {
   const [quoatIndex, setQuoatIndex] = useState(0);
+  var quotes = document.getElementsByClassName("quote");
   useEffect(() => {
     const interval = setInterval(() => {
+      let tempIndex = quoatIndex;
+      quotes[tempIndex].style.opacity = 0;
+      quotes[tempIndex].animate(
+        {
+          opacity: [1, 0],
+          easing: ["ease-out"],
+        },
+        1000
+      );
       if (quoatIndex === quotesArray.length - 1) {
-        setQuoatIndex(0);
+        tempIndex = 0;
       } else {
-        setQuoatIndex(quoatIndex + 1);
+        tempIndex = quoatIndex + 1;
       }
+      setQuoatIndex(tempIndex);
+      quotes[tempIndex].style.opacity = 1;
+      quotes[tempIndex].animate(
+        {
+          opacity: [0, 1],
+          easing: ["ease-in"],
+        },
+        1000
+      );
     }, 20000);
     return () => clearInterval(interval);
   });
   return (
-    <div className="quoat-cntr">
-      <p className="quoat">
-        {quotesArray[quoatIndex] && quotesArray[quoatIndex]["statemant"]}
-      </p>
+    <div className="quote-cntr">
+      {quotesArray.map((eachQuote) => {
+        return <p className="quote">{eachQuote["statemant"]}</p>;
+      })}
     </div>
   );
 };
