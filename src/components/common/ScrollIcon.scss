@@ -3,6 +3,10 @@
   bottom: 0px;
   .scroll-icon-wrpr {
     position: relative;
+    opacity: 0;
+    animation: fadeInBar 3s ease-in;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
     .scroll-icon {
       padding-top: 80px;
     }
@@ -58,5 +62,13 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes fadeInBar {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
