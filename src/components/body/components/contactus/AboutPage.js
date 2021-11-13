@@ -21,7 +21,7 @@ import ScrollIcon from "../../../common/ScrollIcon";
 
 const AboutPage = () => {
   const headerStyle = batch(StickyIn(50, 10), ZoomOut(1, 2), FadeOut(1, 0));
-  const paraOneStyle = batch(Sticky(), FadeOut(1, 0), MoveOut(0, -1000));
+  const paraOneStyle = batch(Sticky(), FadeOut(1, 0));
   const paraThreeStyle = batch(
     StickyOut(50, 30),
     // FadeIn(0, 1),
@@ -36,7 +36,7 @@ const AboutPage = () => {
     MoveOut(0, -100),
     ZoomOut(1, 2)
   );
-  const paraLastStyle = batch(StickyOut(50, 50), FadeIn(0, 1), Zoom(1, 2));
+  const paraLastStyle = batch(StickyOut(50, 50), FadeIn(0, 1), Zoom(2, 1));
   const scrollBarStyle = batch(
     Sticky(50, 100),
     FadeOut(1, 0),
