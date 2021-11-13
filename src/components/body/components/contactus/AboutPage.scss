@@ -31,7 +31,6 @@
   }
   .contact-txt-wrpr {
     color: black;
-    font-size: 24px;
     .contact-hdr {
       font-size: 36px;
       width: 80vw;
@@ -39,12 +38,16 @@
     }
     .para {
       width: 80vw;
+      font-size: 24px;
       text-align: center;
+    }
+    .contact-para1 {
+      text-align: justify;
     }
   }
 }
 
-.test {
+.about-bg {
   background-image: url("./contact_img.jpg");
   height: 100vh;
   width: 100vw;
@@ -89,7 +92,7 @@
         font-size: 18px;
       }
       .para {
-        font-size: 13px;
+        font-size: 15px;
       }
     }
   }

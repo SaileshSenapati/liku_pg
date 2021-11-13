@@ -13,39 +13,30 @@ import {
   StickyOut,
   ZoomOut,
   FadeOut,
+  Zoom,
 } from "react-scroll-motion";
 import "./AboutPage.scss";
 import { footerArray } from "../../../common/Constants";
 import ScrollIcon from "../../../common/ScrollIcon";
 
 const AboutPage = () => {
-  const headerStyle = batch(
-    StickyIn(50, 20),
-    ZoomOut(1, 2),
-    FadeOut(1, 0)
-    // MoveOut(1, -20)
-  );
-  const paraOneStyle = batch(Sticky(), FadeOut(1, 0), MoveOut(1, -100));
-  const paraTwoStyle = batch(
-    StickyOut(50, 40),
-    FadeIn(1, 0),
-    MoveIn(0, -1000),
-    FadeOut(1, 0)
-    // MoveOut(1000, 0)
-  );
+  const headerStyle = batch(StickyIn(50, 10), ZoomOut(1, 2), FadeOut(1, 0));
+  const paraOneStyle = batch(Sticky(), FadeOut(1, 0), MoveOut(0, -1000));
   const paraThreeStyle = batch(
     StickyOut(50, 30),
-    FadeIn(0, 1),
-    MoveIn(1000, -1000),
-    MoveOut(0, -100)
+    // FadeIn(0, 1),
+    MoveIn(-1000, -1000),
+    MoveOut(0, -100),
+    ZoomIn(3, 1)
   );
   const paraFourStyle = batch(
     StickyOut(50, 50),
     FadeIn(0, 1),
     MoveIn(-1000, 1000),
-    MoveOut(0, -100)
+    MoveOut(0, -100),
+    ZoomOut(1, 2)
   );
-  const paraLastStyle = batch(StickyOut(50, 50), FadeIn(0, 1), ZoomIn(2, 1));
+  const paraLastStyle = batch(StickyOut(50, 50), FadeIn(0, 1), Zoom(1, 2));
   const scrollBarStyle = batch(
     Sticky(50, 100),
     FadeOut(1, 0),
@@ -70,6 +61,11 @@ const AboutPage = () => {
                   photography experience to capture all your precious and comic
                   moments in the best candid way possible.
                 </p>
+                <p className="contact-para2 para">
+                  We will make you feel comfortable and bring out your true self
+                  during your session and freez all of the in between moments
+                  and emotions of your big day.
+                </p>
               </Animator>
               <Animator animation={scrollBarStyle}>
                 <div className="scroll-icon-cntr">
@@ -78,15 +74,6 @@ const AboutPage = () => {
               </Animator>
             </ScrollPage>
             <ScrollPage page={1}>
-              <Animator animation={paraTwoStyle}>
-                <p className="contact-para2 para">
-                  We will make you feel comfortable and bring out your true self
-                  during your session and freez all of the in between moments
-                  and emotions of your big day.
-                </p>
-              </Animator>
-            </ScrollPage>
-            <ScrollPage page={2}>
               <Animator animation={paraThreeStyle}>
                 <p className="contact-para3 para">Not sure how to pose?</p>
               </Animator>
@@ -97,8 +84,8 @@ const AboutPage = () => {
                 </p>
               </Animator>
             </ScrollPage>
-            <ScrollPage page={3}>
-              <div className="test">
+            <ScrollPage page={2}>
+              <div className="about-bg">
                 {footerArray.map((eachDtls, index) => {
                   let value = 1000;
                   if (index % 2 === 0) {
@@ -134,7 +121,7 @@ const AboutPage = () => {
                 })}
               </div>
             </ScrollPage>
-            <ScrollPage page={4}>
+            <ScrollPage page={3}>
               <div className="final-para">
                 <Animator animation={paraLastStyle}>
                   <p className="contact-para4 para">
