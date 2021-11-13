@@ -3,6 +3,7 @@ import "./ContactUsPage.scss";
 import Parallax from "react-rellax";
 import wowjs from "wowjs";
 import { footerArray } from "../../../common/Constants";
+import ScrollIcon from "../../../common/ScrollIcon";
 
 const ContactUsPage = () => {
   useEffect(() => {
@@ -32,6 +33,11 @@ const ContactUsPage = () => {
               </Parallax>
             );
           })}
+        </div>
+        <div className="scroll-icon-cntr">
+          <Parallax speed={0}>
+            <ScrollIcon />
+          </Parallax>
         </div>
       </div>
       <div className="contact-dtls-cntr">

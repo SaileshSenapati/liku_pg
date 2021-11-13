@@ -27,9 +27,6 @@
         .img-title {
           position: absolute;
           padding: 10px 20px;
-          animation: fadeIn 3s;
-          animation-fill-mode: forwards;
-          opacity: 0;
           z-index: 10;
           color: white;
           backdrop-filter: saturate(200%) blur(10px);

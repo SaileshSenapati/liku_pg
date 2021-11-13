@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import Footer from "../footer/Footer";
 import HomeGallerySection from "./HomeGallerySection";
 import Quotes from "../../../common/Quotes";
+import ScrollIcon from "../../../common/ScrollIcon";
 
 const HomePage = () => {
   const history = useHistory();
@@ -37,6 +38,11 @@ const HomePage = () => {
               View Our Work
             </div>
           </Parallax>
+          <div className="scroll-icon-cntr">
+            <Parallax speed={0}>
+              <ScrollIcon />
+            </Parallax>
+          </div>
         </div>
       </div>
       <div className="home-gal-section" id="gallery">

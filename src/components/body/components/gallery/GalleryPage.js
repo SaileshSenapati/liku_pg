@@ -15,6 +15,7 @@ import {
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Quotes from "../../../common/Quotes";
+import ScrollIcon from "../../../common/ScrollIcon";
 
 const GalleryPage = () => {
   const history = useHistory();
@@ -110,6 +111,11 @@ const GalleryPage = () => {
                 </Parallax>
               );
             })}
+          </div>
+          <div className="scroll-icon-cntr">
+            <Parallax speed={0}>
+              <ScrollIcon />
+            </Parallax>
           </div>
         </div>
         <div className="gal-full-preview">
