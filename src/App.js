@@ -1,5 +1,5 @@
-import './App.css';
-import ReactPage from './components/ReactPage';
+import "./App.css";
+import ReactPage from "./components/ReactPage";
 
 function App() {
   return (

@@ -1,14 +1,13 @@
 @import "../../../common/style_var.scss";
 
 .home-gal-hdr-cntr {
-  height: 50px;
+  height: 60px;
   width: 100%;
   @include align-cntr();
-  padding: 10px;
-  font-size: 24px;
+  padding: 10px 0px;
+  font-size: 28px;
 }
 .home-gal-all-box-cntr {
-  padding: 10px 0px;
   display: grid;
   gap: 30px;
   .home-gal-box-cntr {
@@ -71,7 +70,7 @@
     .home-gal-box-cntr {
       padding: 0;
       .home-gal-box {
-        padding: 0;
+        padding: 5%;
         .img-cntr {
           height: auto;
           overflow: hidden;
@@ -102,7 +101,9 @@
 
 @media only screen and (max-width: 768px) {
   .home-gal-hdr-cntr {
-    font-size: 16px;
+    font-size: 18px;
+    height: 50px;
+    padding-bottom: 0px;
   }
 }
 

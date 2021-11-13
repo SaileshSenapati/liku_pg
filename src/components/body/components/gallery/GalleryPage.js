@@ -54,9 +54,9 @@ const GalleryPage = () => {
   };
   const getGalSecDOM = (id, header, list) => {
     return (
-      <div className="gal-section">
+      <div className="gal-section" id={id}>
         <div className="gal-sec-hdr">{header}</div>
-        <div className="gal-sec-img-cntr" id={id}>
+        <div className="gal-sec-img-cntr">
           {list.map((image) => {
             return (
               <div className="gal-img-wrpr">

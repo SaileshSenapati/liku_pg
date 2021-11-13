@@ -9,8 +9,9 @@ const BodyContainer = () => {
   const LazyGalleryPage = lazy(() =>
     import("./components/gallery/GalleryPage")
   );
-  const LazyContactUsPage = lazy(() =>
-    import("./components/contactus/ContactUsPage")
+  const LazyContactUsPage = lazy(
+    () => import("./components/contactus/AboutPage")
+    // import("./components/contactus/ContactUsPage")
   );
   const getPages = () => {
     return (

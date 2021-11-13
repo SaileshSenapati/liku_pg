@@ -1,0 +1,104 @@
+@import "../../../common/style_var.scss";
+.contact-dtls-cntr {
+  background-color: #fff;
+  .about-img-cntr {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 5px 5px 20px;
+    .about-img {
+      z-index: 5;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .contact-dtls {
+    @include align-cntr();
+    width: 100%;
+    height: 100%;
+    backdrop-filter: saturate(200%) blur(10px);
+    -webkit-backdrop-filter: saturate(200%) blur(10px);
+    .cont-icon {
+      height: 24px;
+      width: 24px;
+      padding: 5px 10px;
+    }
+    .cont-link {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+    }
+  }
+  .contact-txt-wrpr {
+    color: black;
+    font-size: 24px;
+    .contact-hdr {
+      font-size: 36px;
+      width: 80vw;
+      text-align: center;
+    }
+    .para {
+      width: 80vw;
+      text-align: center;
+    }
+  }
+}
+
+.test {
+  background-image: url("./contact_img.jpg");
+  height: 100vh;
+  width: 100vw;
+  @include parallex-bg-image();
+  background-position: top;
+}
+.final-para {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  color: #fff;
+  position: relative;
+  padding-top: 40%;
+  .para {
+    @include align-cntr();
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact-dtls-cntr {
+    .about-img-cntr {
+      .img-cntr {
+        height: auto;
+        overflow: hidden;
+        position: relative;
+      }
+    }
+    .contact-dtls {
+      .cont-icon {
+        height: 18px;
+        width: 18px;
+        padding: 5px 10px;
+      }
+      .cont-link {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+      }
+    }
+    .contact-txt-wrpr {
+      .contact-hdr {
+        font-size: 18px;
+      }
+      .para {
+        font-size: 13px;
+      }
+    }
+  }
+  .final-para {
+    position: relative;
+    padding-top: 40%;
+    .para {
+      @include align-cntr();
+      font-size: 15px;
+    }
+  }
+}
